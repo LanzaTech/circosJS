@@ -27,8 +27,7 @@ class Core {
     this.tracks = {}
     this._layout = null
     this.conf = defaultsDeep(conf, defaultConf)
-    const container = select(this.conf.container).append('div')
-      .style('position', 'relative')
+    const container = select(this.conf.container);
     this.svg = container.append('svg')
     if (select('body').select('.circos-tooltip').empty()) {
       this.tip = select('body').append('div')
